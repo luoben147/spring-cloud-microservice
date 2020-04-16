@@ -1,0 +1,15 @@
+DROP　DATABASE IF EXISTS cloudDB03;
+CREATE DATABASE cloudDB03 CHARACTER SET UTF8;
+USE cloudDB03;
+
+CREATE TABLE `dept` (
+  `dept_no` bigint(20) NOT NULL AUTO_INCREMENT,
+  `dept_name` varchar(60) DEFAULT NULL,
+  `db_source` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`dept_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `dept` VALUES ('1', '开发部', DATABASE());
+INSERT INTO `dept` VALUES ('2', '人事部', DATABASE());
+INSERT INTO `dept` VALUES ('4', '销售部', DATABASE());
+INSERT INTO `dept` VALUES ('5', '网络部', DATABASE());
