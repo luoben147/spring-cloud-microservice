@@ -1,5 +1,7 @@
 package com.luoben.springcloud.config;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RetryRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,4 +23,16 @@ public class ConfigBean {
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
+
+
+
+    @Bean
+    public IRule myRule(){
+
+        //return new RoundRobinRule(); //指定LoadBalanced的算法 轮询算法（默认）
+        //return new RandomRule(); //指定LoadBalanced的算法 用自带的随机算法
+        //RetryRule 先按照轮询策略获取服务，如果获取服务失败，则在指定时间内会进行重试，获取可用的服务
+        return new RetryRule();
+    }
+
 }
