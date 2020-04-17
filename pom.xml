@@ -19,6 +19,8 @@
         <module>spring-cloud-microservice-provider-dept-8002</module>
         <module>spring-cloud-microservice-provider-dept-8003</module>
         <module>springcloud-microservice-consumer-dept-feign</module>
+        <module>spring-cloud-microservice-provider-dept-hystrix-8001</module>
+        <module>springcloud-microservice-consumer-hystrix-dashboard</module>
     </modules>
 
     <properties>

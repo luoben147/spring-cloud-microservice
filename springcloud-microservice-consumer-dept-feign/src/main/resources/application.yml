@@ -11,3 +11,6 @@ eureka:
 ribbon:
   restclient:
     enabled: true #开启连接失败重试负载均衡策略的配置  不加这个配置ribbon的RetryRule策略不生效
+feign:
+  hystrix:
+    enabled: true #开启feign熔断功能
