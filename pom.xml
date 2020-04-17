@@ -22,6 +22,10 @@
         <module>spring-cloud-microservice-provider-dept-hystrix-8001</module>
         <module>springcloud-microservice-consumer-hystrix-dashboard</module>
         <module>springcloud-microservice-zuul-gateway-9527</module>
+        <module>springcloud-microservice-config-3344</module>
+        <module>springcloud-microservice-config-client-3355</module>
+        <module>springcloud-microservice-config-eureka-client-7001</module>
+        <module>springcloud-microservice-config-dept-client-8001</module>
     </modules>
 
     <properties>

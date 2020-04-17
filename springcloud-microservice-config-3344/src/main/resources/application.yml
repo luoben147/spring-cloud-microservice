@@ -1,0 +1,18 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: springcloud-microservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/luoben147/springcloud-microservice-config.git #github上的git仓库地址
+          #search-paths: springcloud-microservice-config  //搜素目录
+          #username:    #账号密码写真实的快一些我觉得，不使用也能访问有点慢
+          #password:    #密码
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:7001/eureka
+

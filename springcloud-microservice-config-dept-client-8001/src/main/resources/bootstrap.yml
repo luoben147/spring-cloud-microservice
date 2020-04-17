@@ -1,0 +1,9 @@
+spring:
+   cloud:
+     config:
+       name:  config-dept-client #配置文件名称
+       #profile: dev 访问的db01  test访问db02
+       profile: test  #本次访问的配置项
+       label: master
+       uri: http://localhost:3344 #本次服务启动后，先去找3344服务，通过SpringCloudConfig获取github上的配置
+
