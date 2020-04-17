@@ -1,0 +1,13 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+    register-with-eureka: false #服务消费方，自己不注册eureka中心
+
+#配置ribbon
+ribbon:
+  restclient:
+    enabled: true #开启连接失败重试负载均衡策略的配置  不加这个配置ribbon的RetryRule策略不生效

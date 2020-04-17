@@ -18,6 +18,7 @@
         <module>springcloud-microservice-eureka-7003</module>
         <module>spring-cloud-microservice-provider-dept-8002</module>
         <module>spring-cloud-microservice-provider-dept-8003</module>
+        <module>springcloud-microservice-consumer-dept-feign</module>
     </modules>
 
     <properties>
