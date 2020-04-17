@@ -21,6 +21,7 @@
         <module>springcloud-microservice-consumer-dept-feign</module>
         <module>spring-cloud-microservice-provider-dept-hystrix-8001</module>
         <module>springcloud-microservice-consumer-hystrix-dashboard</module>
+        <module>springcloud-microservice-zuul-gateway-9527</module>
     </modules>
 
     <properties>

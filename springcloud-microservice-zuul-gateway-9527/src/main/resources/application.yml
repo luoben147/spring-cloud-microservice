@@ -1,0 +1,35 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-microservice-zuul-gateway
+
+#eureka客户端注册进eureka服务列表
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    #服务实例名称修改
+    instance-id: gateway-9527.com
+    #访问路径显示IP地址
+    prefer-ip-address: true
+
+# 配置zuul的路由映射规则
+zuul:
+  routes:
+    # http://myzuul.com:9527/springcloud-microservice-dept/dept/get/1
+    springcloud-microservice-dept: /mydept/**                   # http://myzuul.com:9527/mydept/dept/get/1
+  # 原真实服务名忽略，多个用"*" ignored-services: "*"
+  ignored-services: springcloud-microservice-dept # 要用小写
+  # 加统一前缀，http://myzuul.com:9527/springcloud/mydept/dept/get/1
+  prefix: /springcloud
+
+#配置通过eureka注册中心的超链接点击本微服务的info内容
+info:
+  app.name: luoben-microservicecloud
+  company.name: www.luoben.com
+  build.artifactId: ${project.artifactId}$
+  build.version: ${project.version}$
+
