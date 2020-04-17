@@ -1,5 +1,5 @@
 # spring-cloud-microservice
-SpringCloud Finchley.SR2 版本的Demo
+SpringCloud Finchley.SR2 版本的微服务构建
 
 ## 项目版本
 - spring cloud版本：Finchley.SR2
